@@ -1,0 +1,17 @@
+<div class = "row border-bottom pb-3" style="margin-top:40px;margin-bottom:40px">
+  <div class="col-4" >
+    {%if info["gender"] == "f":%}
+     <img src="/static/female.png">
+    {%else:%}
+      <img src="/static/male.png">
+    {%endif%} 
+  </div >
+  <div class="col-4">
+    <h4>Name </h4> {{info["_name"]}} {{info["_surname"]}}
+    <h4>Age </h4> {{info["age"]}}
+    <h4>Email </h4> {{info["email"]}}
+  </div> 
+  <div class="col-4" style="padding:80px">
+    <a class="btn btn-primary" href="mailto:{{info["email"]}}"> Send Email</a>
+  </div> 
+</div>
