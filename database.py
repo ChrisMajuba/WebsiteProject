@@ -1,10 +1,11 @@
 import mysql.connector
 from mysql.connector import Error
+import os
 
-HOST="aws.connect.psdb.cloud"
-USERNAME="x1egxfk3olgi4qean9ds"
-PASSWORD="pscale_pw_25iwqISmwoYQ8OF1qLkkdDtRj0by3Ac2gBCdKcKKams"
-DATABASE="cybernetwork_website_jobs"
+HOST=os.getenv("host")
+USERNAME=os.getenv("user_name")
+PASSWORD=os.getenv("password")
+DATABASE=os.getenv("database")
 
 #Function to get info from the database
 def get_trainers():
