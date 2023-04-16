@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Active Force Training</title>
+    <title> Active Force</title>
     {% include "bootstrap.html"%}
   </head>
   <body>
+    <div class="p-3 mb-2 bg-secondary-subtle text-emphasis-secondary"></div>
     {% include "navbar.html"%}
     <h1 class="text-center mb-4"> Active Force!</h1>
-    <div class="container text-center row">
-      <div class="col-6">
-        <img src = "/static/activeforce.jpeg" >
-      </div>
-      <div class="col-6 img-fluid" style="padding:100px; font-size:21px;">
+    <div class="container text-center ">
+        <img src = "/static/activeforce.jpeg" height=auto width=50% style="object-fit:cover;">
+      <div style="padding:100px; font-size:21px;">
         <p>Active Force is a Health and Fitness company that is meant to help people within a 
         specific location connect with Fitness Instructors and/or book for a training session. The CEO, Chris Sibusiso Majuba is a BSc in Mathematical Sciences Graduate and a Qualified Personal Trainer, his soul goal is to create a community of healthy individuals working hand in hand and striving for success.</p>
       </div>
     </div>
     <div class="container" style="font-size:21px; margin-bottom:80px;">
-      <h3> How it Works</h3>
+      <h3 class="text-center"> How it Works</h3>
        <ul>
          <li>Below are available locations where our Group Exercise Instructors host exercising sessions at local Parks.
          </li>
@@ -28,12 +27,12 @@
          </li>
        </ul>
     </div>
-    <div >
+    <div class="text-center" >
       {%include "locations.html"%}
       {% for info in data %}
         {%include "trainers.html"%}
       {% endfor %}
       {%include "footer.html"%}
-      </div>
+    </div>
         </body>
 </html>
