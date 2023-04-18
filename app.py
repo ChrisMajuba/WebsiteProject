@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask import render_template
 from database import get_trainers,add_applicant_db
-#Flask is a web micro framework used to design a website usingpython
+#Flask is a web micro framework used to design a website using python
 
 #creating the Flask object
 app = Flask("__main__")
