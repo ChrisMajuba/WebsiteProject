@@ -84,3 +84,5 @@ def try_to_login():
 #since the file main.py will be ran as a script, python will assign __name__ to __main__
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
+
+#git push --set-upstream origin main to push changes using shell hello
