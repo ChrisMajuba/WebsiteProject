@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Active Force</title>
+    {% include "/css/bootstrap.html"%}
+  </head>
+  <style>
+    .home{
+      width: 100%;
+      height: auto;
+      background:url("/static/homepage.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #feel{
+      padding:20%;
+      color:rgb(255,255,255);
+      font-family:Comic Sans MS;
+      font-size:50px;
+      -webkit-text-stroke: 1px darkmagenta;
+      
+    }
+  </style>
+  <body>
+    {% include "/navigation/navbar.html"%}
+    <div class="home">
+        <h1 class="text-center" id="feel">"A little progress adds up to Big results!"</h1>
+    </div>
+    
+    <div class="container text-center ">
+      <h1 class="text-center mt-4"> Active Force!</h1>
+      <div style="padding:50px; font-size:21px;">
+        <p>Active Force is a Health and Fitness company that is meant to help people within a 
+        specific location connect with Fitness Instructors and/or book for a training session. The comapny's ultimate goal is to create a flexible foundation that promotes fitness and health all areas either developed or underdeveloped as well as create job opportunities for Fitness Professionals. We realise that a healthy community is a succeeding community.</p>
+      </div>
+    </div>
+    
+    <div class="container" style="font-size:21px; margin-bottom:40px;">
+      <div class="row">
+          <div class="col-4">
+          <img src="/static/ge.jpg" height=80% width=100% style="object-fit:cover;">
+        </div>
+        <div class="col-4">
+          <img src="/static/pt.jpg" height=80% width=100% style="object-fit:cover">
+        </div>
+        <div class="col-4">
+          <img src="/static/me.jpg" height=80% width=100% style="object-fit:cover">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+          <h3>Friday Sessions!</h3>
+          <p>Every Friday we offer Group Exercise Sessions at local parks in specific areas.</p>
+          <a href="/parks_page"><button>Book Now!</button></a>
+        </div>
+        <div class="col-4">
+          <h3>Speak to an Expert</h3>
+          <p>If you seek any sort of fitness advice, we offer a variety of fitness experts that are a call away to help.</p>
+          <a href="/experts_page"><button >Book Now!</button></a>
+        </div>
+        <div class="col-4">
+          <h3>Become a Member</h3>
+          <p>Join our Fitness commuinty and gain excess to our Gym facilities!</p>
+          <a href="/membership"><button>Book Now!</button></a>
+        </div>
+      </div>
+      <h1 class="text-center" style="margin-top:40px;margin-bottom:20px">Explore</h1>
+      <div class="row">
+          <div class="col">
+          <img src="/static/explore.jpg" height=50% width=100% style="object-fit:cover;">
+          <p class="text-center">With our community and members growing we plan on introdcuing new ideas such as outdoor cyclying, swimming lessons, hiking and many more. To see more on our upcoming events please see the following link <a href="https://www.hikingsouthafrica.co.za/" target="_blank">See more</a></p>
+        </div>
+      </div>
+      <h1 class="text-center mb-4">More...</h1>
+      <div class="container row">
+          <div class="col-6">
+            <img src="/static/fly.jpg" height=50% width=100% style="object-fit:cover;">
+            <p class="text-center mt-4">Take your fitness journey to the sky with our perfectly selected Workout Programs and Diet plans.</p>
+        </div>
+        <div class="text-center col-2" style="margin-top:20%;"">
+          <h6> Programs</h6>
+          <a href="/exercise/programs"><button >Go!</button></a>
+        </div>
+        <div class="text-center col-2" style="margin-top:20%;">
+          <h6>Diet Plans</h6>
+          <a href="/diet"><button>Go!</button></a>
+        </div>
+      </div>
+      {%include "/navigation/footer.html"%}
+  </body>
+</html>

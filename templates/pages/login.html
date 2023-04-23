@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      {%include "/css/bootstrap.html"%}
+      <title>Login</title>
+    <style>
+      #login{
+        padding:100px;
+    }
+    </style>
+    
+  </head>
+  <body>
+    {%include "/navigation/navbar.html"%}
+    <div class="text-center" id="login">
+      <h1 style="margin-bottom:40px;">Login</h1>
+      <form action ="/logging_in" method="post">
+          <input type="text" name="_email" placeholder="Enter Email Address">
+          <input type="text" name="_pass" placeholder="Enter Password">
+          <input type="submit">
+      </form>
+      <p style="margin-top:10px;">Not yet a Member?<a style="margin:10px;" href="/membership">Register</a></p>
+    </div>
+    {%include "/navigation/footer.html"%}
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Application Submitted</title>
+    {%include "/css/bootstrap.html"%}
+  </head>
+  <body>
+    {%include "/navigation/navbar.html"%}
+    <div class="container">
+      <h1 class="text-center mb-4 mt-4"> Application successfully sent!</h1>
+
+      {%if string =="session" %}
+        <p class="text-center" style="font-size:20px;">An email has been sent to {{data["_email"]}} with a code for your tickets.</p>
+      {%elif string =="membership" %}
+         <p class="text-center" style="font-size:20px;">An email has been sent to {{data["_email"]}}. Your Membership application will be verified within 3 working days. Thank you for choosing Active Force!</p>
+      {%endif%}
+    </div>
+    {%include "/navigation/footer.html"%}
+  </body>
+</html>

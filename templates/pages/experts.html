@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {%include "/css/bootstrap.html"%}
+    <title>Consult with an Expert</title>
+  </head>
+  <body>
+    {%include "/navigation/navbar.html"%}
+    <div class="text-center mb-4 mt-4">
+      <h2> Active Force Experts</h2>
+      <p style="font-size:21px;"> You can also contact our available Experts if you seek any professional advice.</p>
+    </div>
+    {% for info in data %}
+      <div class = "text-center row " style="margin-top:100px;margin-bottom:40px">
+          <div class="col-3" >
+            {%if info["gender"] == "f":%}
+             <img src="/static/female.png" width=50% height=auto>
+            {%else:%}
+              <img src="/static/male.png" width=50% height=auto>
+            {%endif%} 
+          </div >
+          <div class="col-3">
+            <h4 style="color:rgb(150,0,120)">Name </h4> {{info["_name"]}} {{info["_surname"]}}
+            <h4>Age </h4> {{info["age"]}}
+            <h4>Email </h4> {{info["email"]}}
+          </div>
+          <div class="col-3" style="padding:80px">
+            <b>{{info["profession"]}}</b>
+          </div> 
+          <div class="col-3" style="padding:80px">
+            <a class="btn btn-primary" href="mailto:{{info["email"]}}">Send Email</a>
+        </div> 
+      </div>
+    {% endfor %}
+    {%include "/navigation/footer.html"%}
+  </body>
+</html>
