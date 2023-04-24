@@ -80,7 +80,6 @@ def check_member(info):
       mycursor = connection.cursor()
       #The Query to select the user infomation
       string = "SELECT DISTINCT _name,_age,_email,_pass FROM membership WHERE _email='{}' AND _pass='{}';".format(_email,_pass)
-      print(string)
       mycursor.execute(string)
       member = mycursor.fetchone() #fecth the returned output
       index  = mycursor.column_names # fecth the names of the columns
@@ -92,5 +91,4 @@ def check_member(info):
       #close the connections
       connection.close()
       mycursor.close()
-      print("exiting!")
       return member_exist

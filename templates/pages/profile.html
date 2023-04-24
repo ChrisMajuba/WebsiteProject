@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      {% include "/css/bootstrap.html" %}
+    <title> {{member["_name"]}}</title>
+  </head>
+  <body>
+    {% include "/navigation/navbar.html" %}
+    <div>
+      <h3 class="text-center"> Welcome back</h3>
+      <div class="text-center" style="margin-top:auto;margin-bottom:auto; margin-left:auto;margin-right:auto;"> 
+          <h1> {{ member["_name"] }}</h1>
+          <h1> {{ member["_email"] }}</h1>
+      </div>
+    {% include "/navigation/footer.html" %}
+  </body>
+</html>
